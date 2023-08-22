@@ -161,7 +161,9 @@ function App() {
                     "Memo": ""
                   })}
                 >
-                  <GridColumn field="Account" title="Account" width="110px" className="grid-column" />
+                  <GridColumn field="Account" title="Account" width="110px" className="grid-column" cell={(props) => (
+                    <DropDownList data={[]} fillMode="flat" />
+                  )} />
                   <GridColumn field="ReceivedFrom" title="Received From" width="220px" className="grid-column" />
                   <GridColumn field="Amount" title="Amount" width="90px" className="grid-column" />
                   <GridColumn field="Reference" title="Reference" width="110px" className="grid-column" />
